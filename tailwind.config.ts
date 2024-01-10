@@ -11,9 +11,9 @@ export default {
       sans: ["Inter Variable", "Inter", "sans-serif"],
     },
     colors: {
-        gray: colors.zinc,
-        primary: colors.blue,
-        secondary: colors.emerald,
-    }
+      gray: colors.zinc,
+      primary: colors.blue,
+      secondary: colors.emerald,
+    },
   },
 } satisfies Config;
