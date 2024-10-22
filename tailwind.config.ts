@@ -1,19 +1,19 @@
-import { type Config } from "tailwindcss";
-import colors from "tailwindcss/colors.js";
+import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
-    "{routes,islands,components}/**/*.{ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
   theme: {
-    fontFamily: {
-      sans: ["Inter Variable", "Inter", "sans-serif"],
-    },
-    colors: {
-      gray: colors.zinc,
-      primary: colors.blue,
-      secondary: colors.emerald,
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
     },
   },
-} satisfies Config;
+  plugins: [],
+};
+export default config;
